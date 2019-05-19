@@ -2,7 +2,7 @@ module WeightedOnlineStats
 
 export WeightedSum, WeightedMean,
     WeightedVariance, WeightedCovMatrix,
-    WeightedAdaptiveHist, WeightedAdaptiveBins,
+    WeightedHist, WeightedAdaptiveHist, WeightedAdaptiveBins,
     fit!, merge!, weightsum, value,
     mean, std, cov, cor, median, quantile
 
@@ -22,6 +22,7 @@ import Statistics
 import Statistics: mean, var, std, cov, cor, median, quantile
 import LinearAlgebra
 import LinearAlgebra: Hermitian, lmul!, rmul!, Diagonal, diag
+import StatsBase: midpoints
 
 include("interface.jl")
 include("sum.jl")
